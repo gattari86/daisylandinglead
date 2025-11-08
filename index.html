@@ -6,6 +6,7 @@
     <title>Acne Treatment Downey CA | Daisy MD Care - Medical-Grade Skincare</title>
     <meta name="description" content="Daisy MD Care offers specialized acne treatment in Downey, California. Expert-guided, medical-grade skincare with visible results in as soon as 2 weeks. Se habla español. Book your free consultation.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -15,12 +16,14 @@
 
         :root {
             --daisy-teal: #0e3a47;
+            --daisy-teal-dark: #051f2a;
             --daisy-mint: #6dd1ca;
             --daisy-aqua: #47a3c2;
             --light-bg: #f5f9fb;
             --dark-gray: #2c3e50;
             --border-gray: #e0e0e0;
             --white: #ffffff;
+            --accent-success: #2ecc71;
 
             --space-xs: 8px;
             --space-sm: 12px;
@@ -75,16 +78,36 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, var(--daisy-teal) 0%, rgba(14, 58, 71, 0.8) 50%, rgba(109, 209, 202, 0.1) 100%);
+            background: linear-gradient(135deg, var(--daisy-teal-dark) 0%, var(--daisy-teal) 50%, rgba(14, 58, 71, 0.9) 100%);
             color: var(--white);
             padding: var(--space-4xl) var(--space-xl);
             text-align: center;
-            min-height: 720px;
+            min-height: 680px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: var(--space-2xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(109, 209, 202, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(71, 163, 194, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
         }
 
         .hero h1 {
@@ -92,6 +115,7 @@
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: var(--space-lg);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
 
         .hero-subheading {
@@ -100,34 +124,8 @@
             max-width: 700px;
             margin-bottom: var(--space-2xl);
             line-height: 1.7;
-        }
-
-        .hero-images {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--space-lg);
-            width: 100%;
-            max-width: 900px;
-            margin-bottom: var(--space-xl);
-        }
-
-        .hero-image-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .hero-image-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
-        }
-
-        .hero-image-card img {
-            width: 100%;
-            height: auto;
-            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-cta-group {
@@ -164,8 +162,67 @@
             line-height: 1.6;
         }
 
-        .value-prop {
+        .before-after-gallery {
             background: var(--light-bg);
+            padding: var(--space-4xl) var(--space-xl);
+        }
+
+        .gallery-title {
+            font-size: 2.2rem;
+            color: var(--daisy-teal);
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .gallery-subtitle {
+            text-align: center;
+            color: var(--dark-gray);
+            margin-bottom: var(--space-3xl);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: var(--space-2xl);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-label {
+            padding: var(--space-lg);
+            text-align: center;
+            background: linear-gradient(135deg, rgba(14, 58, 71, 0.05) 0%, rgba(109, 209, 202, 0.05) 100%);
+            font-weight: 600;
+            color: var(--daisy-teal);
+            font-size: 0.95rem;
+        }
+
+        .value-prop {
+            background: var(--white);
             padding: var(--space-4xl) var(--space-xl);
             text-align: center;
         }
@@ -173,7 +230,7 @@
         .value-prop h2 {
             font-size: 2.2rem;
             color: var(--daisy-teal);
-            margin-bottom: var(--space-2xl);
+            margin-bottom: var(--space-3xl);
         }
 
         .value-cards {
@@ -185,7 +242,7 @@
         }
 
         .value-card {
-            background: var(--white);
+            background: var(--light-bg);
             padding: var(--space-2xl);
             border-radius: 8px;
             border-left: 4px solid var(--daisy-teal);
@@ -195,6 +252,12 @@
 
         .value-card:hover {
             transform: translateY(-4px);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--daisy-teal);
+            margin-bottom: var(--space-md);
         }
 
         .value-card h3 {
@@ -210,7 +273,7 @@
 
         .results-section {
             padding: var(--space-4xl) var(--space-xl);
-            background: var(--white);
+            background: var(--light-bg);
         }
 
         .results-section h2 {
@@ -221,20 +284,27 @@
         }
 
         .results-claim {
-            background: linear-gradient(135deg, rgba(14, 58, 71, 0.05) 0%, rgba(109, 209, 202, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(14, 58, 71, 0.08) 0%, rgba(109, 209, 202, 0.08) 100%);
             border-left: 4px solid var(--daisy-teal);
-            padding: var(--space-xl);
-            margin-bottom: var(--space-2xl);
             border-radius: 8px;
+            padding: var(--space-2xl);
             max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto var(--space-2xl);
         }
 
         .results-claim h3 {
             font-size: 1.5rem;
             color: var(--daisy-teal);
             margin-bottom: var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            justify-content: center;
+        }
+
+        .results-icon {
+            font-size: 1.8rem;
+            color: var(--accent-success);
         }
 
         .results-claim p {
@@ -243,7 +313,7 @@
         }
 
         .testimonials-section {
-            background: var(--light-bg);
+            background: var(--white);
             padding: var(--space-4xl) var(--space-xl);
         }
 
@@ -263,7 +333,7 @@
         }
 
         .testimonial-card {
-            background: var(--white);
+            background: var(--light-bg);
             padding: var(--space-2xl);
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -290,7 +360,7 @@
         }
 
         .expertise-section {
-            background: var(--white);
+            background: var(--light-bg);
             padding: var(--space-4xl) var(--space-xl);
         }
 
@@ -302,16 +372,25 @@
         }
 
         .expertise-content {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: var(--space-2xl);
         }
 
         .expertise-item {
-            padding: var(--space-lg);
+            background: var(--white);
+            padding: var(--space-2xl);
             text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .expertise-icon {
+            font-size: 2.5rem;
+            color: var(--daisy-teal);
+            margin-bottom: var(--space-md);
         }
 
         .expertise-item h3 {
@@ -326,7 +405,7 @@
         }
 
         .process-section {
-            background: var(--light-bg);
+            background: var(--white);
             padding: var(--space-4xl) var(--space-xl);
         }
 
@@ -346,11 +425,26 @@
         }
 
         .process-step {
-            background: var(--white);
+            background: var(--light-bg);
             padding: var(--space-2xl);
             border-radius: 8px;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .process-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--daisy-teal);
+            color: var(--white);
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: var(--space-lg);
         }
 
         .process-step h4 {
@@ -360,7 +454,7 @@
         }
 
         .faq-section {
-            background: var(--white);
+            background: var(--light-bg);
             padding: var(--space-4xl) var(--space-xl);
         }
 
@@ -381,11 +475,12 @@
             border: 1px solid var(--border-gray);
             border-radius: 8px;
             overflow: hidden;
+            background: var(--white);
         }
 
         .faq-question {
             padding: var(--space-lg);
-            background: var(--light-bg);
+            background: var(--white);
             cursor: pointer;
             font-weight: 600;
             color: var(--daisy-teal);
@@ -396,12 +491,12 @@
         }
 
         .faq-question:hover {
-            background: rgba(14, 58, 71, 0.08);
+            background: var(--light-bg);
         }
 
         .faq-answer {
             padding: var(--space-lg);
-            background: var(--white);
+            background: var(--light-bg);
             display: none;
         }
 
@@ -410,7 +505,7 @@
         }
 
         .final-cta-section {
-            background: linear-gradient(135deg, var(--daisy-teal) 0%, rgba(14, 58, 71, 0.8) 100%);
+            background: linear-gradient(135deg, var(--daisy-teal-dark) 0%, var(--daisy-teal) 100%);
             color: var(--white);
             padding: var(--space-4xl) var(--space-xl);
             text-align: center;
@@ -497,7 +592,7 @@
                 font-size: 2.2rem;
             }
 
-            .hero-images {
+            .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -528,9 +623,8 @@
                 font-size: 1rem;
             }
 
-            .hero-images {
+            .gallery-grid {
                 grid-template-columns: 1fr;
-                max-width: 100%;
             }
 
             .hero-cta {
@@ -538,6 +632,7 @@
                 max-width: 100%;
             }
 
+            .before-after-gallery,
             .value-prop,
             .results-section,
             .testimonials-section,
@@ -548,6 +643,7 @@
                 padding: var(--space-3xl) var(--space-lg);
             }
 
+            .gallery-title,
             .value-prop h2,
             .results-section h2,
             .testimonials-section h2,
@@ -578,6 +674,7 @@
                 margin-bottom: var(--space-lg);
             }
 
+            .gallery-title,
             .value-prop h2,
             .results-section h2,
             .testimonials-section h2,
@@ -603,24 +700,41 @@
     </nav>
 
     <section class="hero">
-        <h1>Clearer Skin in as Soon as 2 Weeks</h1>
-        <p class="hero-subheading">Acne treatment tailored to your skin, guided by real experts at our Downey, CA clinic. Se habla español.</p>
+        <div class="hero-content">
+            <h1>Clearer Skin in as Soon as 2 Weeks</h1>
+            <p class="hero-subheading">Acne treatment tailored to your skin, guided by real experts at our Downey, CA clinic. Se habla español.</p>
 
-        <div class="hero-images">
-            <div class="hero-image-card">
-                <img src="public/images/before-01.png" alt="Patient acne treatment before and after - clear skin improvement" loading="lazy">
-            </div>
-            <div class="hero-image-card">
-                <img src="public/images/before-02.png" alt="Professional acne treatment results showing skin transformation" loading="lazy">
-            </div>
-            <div class="hero-image-card">
-                <img src="public/images/before-03.png" alt="Medical-grade acne treatment with visible improvement in skin clarity" loading="lazy">
+            <div class="hero-cta-group">
+                <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="hero-cta">Book a Free Consultation</a>
+                <p class="hero-note">Your consultation includes a free post-visit care and skin improvement plan.</p>
             </div>
         </div>
+    </section>
 
-        <div class="hero-cta-group">
-            <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="hero-cta">Book a Free Consultation</a>
-            <p class="hero-note">Your consultation includes a free post-visit care and skin improvement plan.</p>
+    <section class="before-after-gallery">
+        <h2 class="gallery-title">Real Results. Real Patients.</h2>
+        <p class="gallery-subtitle">See the transformation that happens when expert treatment meets personalized care.</p>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="public/images/before-01.png" alt="Patient acne treatment before and after - clear skin improvement" loading="lazy">
+                <div class="gallery-label">Clear Skin Achieved</div>
+            </div>
+            <div class="gallery-card">
+                <img src="public/images/before-02.png" alt="Professional acne treatment results showing skin transformation" loading="lazy">
+                <div class="gallery-label">Visible Improvement</div>
+            </div>
+            <div class="gallery-card">
+                <img src="public/images/patient-04.png" alt="Medical-grade acne treatment showing skin clarity and improvement" loading="lazy">
+                <div class="gallery-label">Expert Care Works</div>
+            </div>
+            <div class="gallery-card">
+                <img src="public/images/patient-05.png" alt="Advanced acne treatment results showing reduced breakouts" loading="lazy">
+                <div class="gallery-label">Personalized Results</div>
+            </div>
+            <div class="gallery-card">
+                <img src="public/images/spa-wellness.jpeg" alt="Professional skincare treatment environment at Daisy MD Care" loading="lazy">
+                <div class="gallery-label">Professional Setting</div>
+            </div>
         </div>
     </section>
 
@@ -628,14 +742,17 @@
         <h2>Why Choose Daisy MD Care for Acne Treatment</h2>
         <div class="value-cards">
             <div class="value-card">
+                <div class="value-icon"><i class="fas fa-calendar-days"></i></div>
                 <h3>42 Years of Expertise</h3>
                 <p>Since 1979, Daisy MD Care has specialized in problem skin and acne treatment. Our proven track record speaks for itself.</p>
             </div>
             <div class="value-card">
+                <div class="value-icon"><i class="fas fa-flask-vial"></i></div>
                 <h3>Medical-Grade Solutions</h3>
                 <p>Professional, expert-guided skincare backed by dermatological science. Real results, not promises.</p>
             </div>
             <div class="value-card">
+                <div class="value-icon"><i class="fas fa-user-check"></i></div>
                 <h3>Personalized Treatment Plans</h3>
                 <p>Your acne is unique. We create customized treatment strategies targeting root causes, not just symptoms.</p>
             </div>
@@ -645,7 +762,7 @@
     <section class="results-section">
         <h2>Verified Results You Can Trust</h2>
         <div class="results-claim">
-            <h3>Most Patients Begin Seeing Results in as Soon as Two Weeks</h3>
+            <h3><i class="fas fa-check-circle results-icon"></i> Most Patients Begin Seeing Results in as Soon as Two Weeks</h3>
             <p>Our advanced acne treatment methods combine cutting-edge technology with decades of clinical expertise. This isn't a marketing claim—it's a verified outcome from thousands of satisfied patients in the Downey, CA area and beyond.</p>
         </div>
     </section>
@@ -675,14 +792,17 @@
         <h2>Professional Acne Treatment Approach</h2>
         <div class="expertise-content">
             <div class="expertise-item">
+                <div class="expertise-icon"><i class="fas fa-stethoscope"></i></div>
                 <h3>Expert Assessment</h3>
                 <p>Our experienced specialists evaluate your skin type, severity, and unique needs to design the right treatment path.</p>
             </div>
             <div class="expertise-item">
+                <div class="expertise-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
                 <h3>Advanced Therapies</h3>
                 <p>We use state-of-the-art, medical-grade treatments proven to deliver clear skin faster and more effectively.</p>
             </div>
             <div class="expertise-item">
+                <div class="expertise-icon"><i class="fas fa-hands-holding-heart"></i></div>
                 <h3>Ongoing Support</h3>
                 <p>Your journey doesn't end with treatment. We provide continuous guidance and skin maintenance plans for lasting results.</p>
             </div>
@@ -693,19 +813,23 @@
         <h2>Your Clear Skin Journey</h2>
         <div class="process-timeline">
             <div class="process-step">
-                <h4>Step 1: Consultation</h4>
+                <div class="process-number">1</div>
+                <h4>Consultation</h4>
                 <p>Book a free consultation. We'll assess your skin, discuss your concerns, and develop a personalized plan.</p>
             </div>
             <div class="process-step">
-                <h4>Step 2: Treatment</h4>
+                <div class="process-number">2</div>
+                <h4>Treatment</h4>
                 <p>Begin your customized acne treatment with our expert guidance using medical-grade products and therapies.</p>
             </div>
             <div class="process-step">
-                <h4>Step 3: Results</h4>
+                <div class="process-number">3</div>
+                <h4>Results</h4>
                 <p>See visible improvement in as soon as 2 weeks. Most patients achieve significant skin clarity within 4-6 weeks.</p>
             </div>
             <div class="process-step">
-                <h4>Step 4: Maintenance</h4>
+                <div class="process-number">4</div>
+                <h4>Maintenance</h4>
                 <p>We provide a personalized post-visit care plan to maintain your clear skin and prevent future breakouts.</p>
             </div>
         </div>
@@ -716,7 +840,7 @@
         <div class="faq-container">
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    How quickly will I see results? <span>+</span>
+                    <span>How quickly will I see results?</span> <span>+</span>
                 </div>
                 <div class="faq-answer">
                     <p>Most of our patients begin seeing visible improvement in as soon as two weeks. Significant skin clarity typically occurs within 4-6 weeks, depending on your skin type and acne severity.</p>
@@ -724,7 +848,7 @@
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    Is the treatment safe for all skin types? <span>+</span>
+                    <span>Is the treatment safe for all skin types?</span> <span>+</span>
                 </div>
                 <div class="faq-answer">
                     <p>Yes. Our medical-grade treatments are customized for your specific skin type and concerns. During your consultation, we'll assess your skin and ensure the treatment is perfectly tailored to you.</p>
@@ -732,7 +856,7 @@
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    Do you offer bilingual services? <span>+</span>
+                    <span>Do you offer bilingual services?</span> <span>+</span>
                 </div>
                 <div class="faq-answer">
                     <p>Yes, se habla español. Our team is fluent in both English and Spanish to ensure clear communication and comfort for all our patients.</p>
@@ -740,7 +864,7 @@
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    What makes Daisy MD Care different? <span>+</span>
+                    <span>What makes Daisy MD Care different?</span> <span>+</span>
                 </div>
                 <div class="faq-answer">
                     <p>With 42 years of specialized experience in acne and problem skin, we combine expert knowledge with cutting-edge medical-grade treatments. We focus on personalized solutions that target root causes, not just symptoms.</p>
@@ -748,7 +872,7 @@
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    What happens after my treatment? <span>+</span>
+                    <span>What happens after my treatment?</span> <span>+</span>
                 </div>
                 <div class="faq-answer">
                     <p>Your consultation includes a free post-visit care and skin improvement plan. We provide ongoing guidance to help you maintain your clear skin and prevent future breakouts.</p>
@@ -756,7 +880,7 @@
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    Are you located in Downey? <span>+</span>
+                    <span>Are you located in Downey?</span> <span>+</span>
                 </div>
                 <div class="faq-answer">
                     <p>Yes, Daisy MD Care is conveniently located in Downey, California, serving the Downey area and surrounding communities in Los Angeles County.</p>
@@ -789,12 +913,12 @@
 
             document.querySelectorAll('.faq-answer').forEach(item => {
                 item.classList.remove('active');
-                item.previousElementSibling.querySelector('span').textContent = '+';
+                item.parentElement.querySelector('.faq-question span:last-child').textContent = '+';
             });
 
             if (!isActive) {
                 answer.classList.add('active');
-                element.querySelector('span').textContent = '−';
+                element.querySelector('span:last-child').textContent = '−';
             }
         }
     </script>
