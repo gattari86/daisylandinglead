@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DaisyMD Care - Professional Acne Treatment Solutions</title>
+    <title>Acne Treatment Downey CA | Daisy MD Care - Medical-Grade Skincare</title>
+    <meta name="description" content="Daisy MD Care offers specialized acne treatment in Downey, California. Expert-guided, medical-grade skincare with visible results in as soon as 2 weeks. Se habla español. Book your free consultation.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -13,25 +14,14 @@
         }
 
         :root {
-            /* Primary Colors */
-            --deep-teal: #0e3a47;
-            --deep-teal-dark: #0a2b35;
-            --deep-teal-light: #1a4d5c;
+            --daisy-teal: #0e3a47;
+            --daisy-mint: #6dd1ca;
+            --daisy-aqua: #47a3c2;
+            --light-bg: #f5f9fb;
+            --dark-gray: #2c3e50;
+            --border-gray: #e0e0e0;
+            --white: #ffffff;
 
-            /* Secondary Colors */
-            --soft-cream: #f7f8f2;
-            --soft-cream-warm: #f4f6ee;
-            --mint-green: #6dd1ca;
-            --mint-green-light: #8ddbcf;
-            --bright-aqua: #1eafd0;
-            --bright-aqua-light: #4ac0d9;
-
-            /* Supporting Colors */
-            --dark-grey: #333333;
-            --light-grey: #dfdfdf;
-            --pure-white: #ffffff;
-
-            /* Spacing Scale (8px base) */
             --space-xs: 8px;
             --space-sm: 12px;
             --space-md: 16px;
@@ -45,18 +35,17 @@
         body {
             font-family: 'Raleway', sans-serif;
             line-height: 1.6;
-            color: var(--dark-grey);
-            background: var(--soft-cream);
+            color: var(--dark-gray);
+            background: var(--white);
         }
 
-        /* Navigation */
         nav {
-            background: var(--pure-white);
+            background: var(--white);
             padding: var(--space-md) var(--space-xl);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -69,881 +58,745 @@
         }
 
         .logo-section img {
-            height: 40px;
+            height: 45px;
             width: auto;
-        }
-
-        nav-links {
-            display: flex;
-            gap: var(--space-2xl);
-            list-style: none;
         }
 
         nav a {
             text-decoration: none;
-            color: var(--dark-grey);
+            color: var(--dark-gray);
             font-weight: 500;
+            font-size: 0.95rem;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: var(--bright-aqua);
+            color: var(--daisy-teal);
         }
 
-        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--deep-teal) 0%, rgba(14,58,71,0.8) 50%, rgba(109,209,202,0.1) 100%);
-            color: var(--pure-white);
+            background: linear-gradient(135deg, var(--daisy-teal) 0%, rgba(14, 58, 71, 0.8) 50%, rgba(109, 209, 202, 0.1) 100%);
+            color: var(--white);
             padding: var(--space-4xl) var(--space-xl);
             text-align: center;
-            min-height: 640px;
+            min-height: 720px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: var(--space-3xl);
+            gap: var(--space-2xl);
         }
 
         .hero h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 700;
             line-height: 1.2;
-            margin: 0;
-            max-width: 800px;
+            margin-bottom: var(--space-lg);
         }
 
-        .hero p {
-            font-size: 1.3rem;
+        .hero-subheading {
+            font-size: 1.25rem;
+            font-weight: 400;
             max-width: 700px;
-            opacity: 0.95;
-            font-weight: 300;
-            margin: 0;
+            margin-bottom: var(--space-2xl);
             line-height: 1.7;
+        }
+
+        .hero-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: var(--space-xl);
+        }
+
+        .hero-image-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .hero-image-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+            align-items: center;
         }
 
         .hero-cta {
             display: inline-block;
+            background: linear-gradient(135deg, var(--daisy-aqua) 0%, var(--daisy-mint) 100%);
+            color: var(--white);
             padding: 18px 48px;
-            background: linear-gradient(135deg, var(--bright-aqua) 0%, var(--bright-aqua-light) 100%);
-            color: var(--pure-white);
+            font-size: 1.1rem;
+            font-weight: 600;
             text-decoration: none;
             border-radius: 8px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            box-shadow: 0 8px 24px rgba(30, 175, 208, 0.35);
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 24px rgba(71, 163, 194, 0.3);
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .hero-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(30, 175, 208, 0.45);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--space-xl);
-        }
-
-        /* Section Styles */
-        section {
-            padding: var(--space-4xl) 0;
-        }
-
-        section h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.8rem;
-            color: var(--deep-teal);
-            margin-bottom: var(--space-3xl);
-            text-align: center;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-
-        /* Trust Section */
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--space-3xl);
-        }
-
-        .trust-card {
-            background: var(--pure-white);
-            padding: var(--space-3xl);
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(14, 58, 71, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .trust-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 32px rgba(14, 58, 71, 0.15);
-        }
-
-        .trust-card h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.35rem;
-            color: var(--bright-aqua);
-            margin-bottom: var(--space-md);
-            font-weight: 600;
-            line-height: 1.4;
-        }
-
-        .trust-card p {
-            color: var(--dark-grey);
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        /* Problems Section */
-        .problems-section {
-            background: var(--soft-cream-warm);
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--space-3xl);
-        }
-
-        .problem-card {
-            background: var(--pure-white);
-            padding: var(--space-2xl);
-            border-radius: 10px;
-            border-left: 5px solid var(--bright-aqua);
-            transition: all 0.3s;
-        }
-
-        .problem-card:hover {
-            background: linear-gradient(180deg, rgba(247,248,242,1) 0%, rgba(240,242,232,0.95) 100%);
-            box-shadow: 0 8px 24px rgba(30, 175, 208, 0.12);
             transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(71, 163, 194, 0.4);
         }
 
-        .problem-card h3 {
-            font-family: 'Poppins', sans-serif;
-            color: var(--deep-teal);
-            font-size: 1.25rem;
-            margin-bottom: var(--space-md);
-            font-weight: 600;
-            line-height: 1.4;
-        }
-
-        .problem-card .label {
-            display: inline-block;
-            background: var(--mint-green);
-            color: var(--pure-white);
-            padding: var(--space-xs) var(--space-sm);
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: var(--space-md);
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-
-        .problem-card p {
-            color: var(--dark-grey);
+        .hero-note {
             font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* Treatment Section */
-        .treatment-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: var(--space-3xl);
-        }
-
-        .treatment-card {
-            background: var(--pure-white);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(14, 58, 71, 0.08);
-            transition: all 0.3s;
-        }
-
-        .treatment-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 16px 40px rgba(14, 58, 71, 0.18);
-        }
-
-        .treatment-header {
-            background: linear-gradient(135deg, var(--deep-teal) 0%, var(--deep-teal-light) 100%);
-            color: var(--pure-white);
-            padding: var(--space-2xl);
-            text-align: center;
-        }
-
-        .treatment-header h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin-bottom: var(--space-sm);
-            line-height: 1.3;
-        }
-
-        .treatment-body {
-            padding: var(--space-2xl);
-        }
-
-        .treatment-body ul {
-            list-style: none;
-            margin-bottom: var(--space-2xl);
-        }
-
-        .treatment-body li {
-            padding: var(--space-md) 0;
-            padding-left: var(--space-2xl);
-            position: relative;
-            color: var(--dark-grey);
-            font-size: 0.95rem;
+            max-width: 600px;
+            font-weight: 400;
             line-height: 1.6;
         }
 
-        .treatment-body li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--mint-green);
-            font-weight: bold;
-            font-size: 1.3rem;
-        }
-
-        .treatment-cta {
-            display: block;
-            width: 100%;
-            padding: 16px;
-            background: linear-gradient(135deg, var(--bright-aqua) 0%, var(--bright-aqua-light) 100%);
-            color: var(--pure-white);
-            text-decoration: none;
+        .value-prop {
+            background: var(--light-bg);
+            padding: var(--space-4xl) var(--space-xl);
             text-align: center;
-            border-radius: 6px;
-            font-weight: 700;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
+        }
+
+        .value-prop h2 {
+            font-size: 2.2rem;
+            color: var(--daisy-teal);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .value-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-2xl);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .value-card {
+            background: var(--white);
+            padding: var(--space-2xl);
+            border-radius: 8px;
+            border-left: 4px solid var(--daisy-teal);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .value-card h3 {
+            font-size: 1.4rem;
+            color: var(--daisy-teal);
+            margin-bottom: var(--space-md);
+        }
+
+        .value-card p {
             font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
+            line-height: 1.7;
         }
 
-        .treatment-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(30, 175, 208, 0.35);
+        .results-section {
+            padding: var(--space-4xl) var(--space-xl);
+            background: var(--white);
         }
 
-        /* Testimonials Section */
+        .results-section h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            color: var(--daisy-teal);
+            margin-bottom: var(--space-3xl);
+        }
+
+        .results-claim {
+            background: linear-gradient(135deg, rgba(14, 58, 71, 0.05) 0%, rgba(109, 209, 202, 0.05) 100%);
+            border-left: 4px solid var(--daisy-teal);
+            padding: var(--space-xl);
+            margin-bottom: var(--space-2xl);
+            border-radius: 8px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .results-claim h3 {
+            font-size: 1.5rem;
+            color: var(--daisy-teal);
+            margin-bottom: var(--space-md);
+        }
+
+        .results-claim p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
         .testimonials-section {
-            background: linear-gradient(45deg, rgba(30,175,208,0.05) 0%, rgba(109,209,202,0.08) 100%);
+            background: var(--light-bg);
+            padding: var(--space-4xl) var(--space-xl);
         }
 
-        .testimonial-grid {
+        .testimonials-section h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            color: var(--daisy-teal);
+            margin-bottom: var(--space-3xl);
+        }
+
+        .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: var(--space-2xl);
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .testimonial-card {
-            background: var(--pure-white);
+            background: var(--white);
             padding: var(--space-2xl);
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(14, 58, 71, 0.06);
-        }
-
-        .testimonial-card p {
-            font-style: italic;
-            color: var(--dark-grey);
-            margin-bottom: var(--space-md);
-            line-height: 1.8;
-            font-size: 0.95rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
         }
 
         .stars {
-            color: var(--bright-aqua);
-            font-size: 1.1rem;
+            color: #ffc107;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--dark-gray);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--daisy-teal);
+        }
+
+        .expertise-section {
+            background: var(--white);
+            padding: var(--space-4xl) var(--space-xl);
+        }
+
+        .expertise-section h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            color: var(--daisy-teal);
+            margin-bottom: var(--space-3xl);
+        }
+
+        .expertise-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-2xl);
+        }
+
+        .expertise-item {
+            padding: var(--space-lg);
+            text-align: center;
+        }
+
+        .expertise-item h3 {
+            font-size: 1.3rem;
+            color: var(--daisy-teal);
             margin-bottom: var(--space-md);
-            letter-spacing: 2px;
         }
 
-        .author {
-            font-weight: 700;
-            color: var(--deep-teal);
+        .expertise-item p {
             font-size: 0.95rem;
+            line-height: 1.7;
         }
 
-        /* FAQ Section */
+        .process-section {
+            background: var(--light-bg);
+            padding: var(--space-4xl) var(--space-xl);
+        }
+
+        .process-section h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            color: var(--daisy-teal);
+            margin-bottom: var(--space-3xl);
+        }
+
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-2xl);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .process-step {
+            background: var(--white);
+            padding: var(--space-2xl);
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .process-step h4 {
+            font-size: 1.2rem;
+            color: var(--daisy-teal);
+            margin-bottom: var(--space-md);
+        }
+
         .faq-section {
-            background: var(--soft-cream-warm);
+            background: var(--white);
+            padding: var(--space-4xl) var(--space-xl);
+        }
+
+        .faq-section h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            color: var(--daisy-teal);
+            margin-bottom: var(--space-3xl);
         }
 
         .faq-container {
-            max-width: 750px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
         .faq-item {
-            background: var(--pure-white);
-            margin-bottom: var(--space-md);
+            margin-bottom: var(--space-lg);
+            border: 1px solid var(--border-gray);
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(14, 58, 71, 0.05);
         }
 
         .faq-question {
             padding: var(--space-lg);
+            background: var(--light-bg);
             cursor: pointer;
+            font-weight: 600;
+            color: var(--daisy-teal);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-weight: 600;
-            color: var(--deep-teal);
-            transition: all 0.3s;
-            font-size: 1.05rem;
+            transition: background 0.3s;
         }
 
         .faq-question:hover {
-            background: var(--soft-cream);
-            color: var(--bright-aqua);
-        }
-
-        .faq-toggle {
-            font-size: 1.5rem;
-            transition: transform 0.3s;
-            flex-shrink: 0;
-            margin-left: var(--space-lg);
-        }
-
-        .faq-item.active .faq-toggle {
-            transform: rotate(180deg);
+            background: rgba(14, 58, 71, 0.08);
         }
 
         .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            background: var(--soft-cream);
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 400px;
             padding: var(--space-lg);
-            border-top: 1px solid var(--light-grey);
+            background: var(--white);
+            display: none;
         }
 
-        .faq-answer p {
-            line-height: 1.8;
-            font-size: 0.95rem;
+        .faq-answer.active {
+            display: block;
         }
 
-        /* Final CTA Section */
-        .final-cta {
-            background: linear-gradient(135deg, var(--deep-teal) 0%, var(--deep-teal-light) 100%);
-            color: var(--pure-white);
-            text-align: center;
+        .final-cta-section {
+            background: linear-gradient(135deg, var(--daisy-teal) 0%, rgba(14, 58, 71, 0.8) 100%);
+            color: var(--white);
             padding: var(--space-4xl) var(--space-xl);
+            text-align: center;
         }
 
-        .final-cta h2 {
-            color: var(--pure-white);
-            font-size: 2.8rem;
+        .final-cta-section h2 {
+            font-size: 2rem;
             margin-bottom: var(--space-xl);
-            line-height: 1.3;
         }
 
-        .final-cta p {
-            font-size: 1.2rem;
-            margin-bottom: var(--space-3xl);
-            opacity: 0.95;
-            max-width: 650px;
+        .final-cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: var(--space-2xl);
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.8;
         }
 
         .cta-buttons {
             display: flex;
+            flex-wrap: wrap;
             gap: var(--space-lg);
             justify-content: center;
-            flex-wrap: wrap;
         }
 
-        .btn-primary {
-            padding: 18px 48px;
-            background: linear-gradient(135deg, var(--bright-aqua) 0%, var(--bright-aqua-light) 100%);
-            color: var(--pure-white);
-            text-decoration: none;
+        .cta-button {
+            padding: 16px 40px;
+            font-size: 1rem;
+            font-weight: 600;
             border-radius: 8px;
-            font-weight: 700;
-            font-size: 1.05rem;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 8px 24px rgba(30, 175, 208, 0.35);
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(30, 175, 208, 0.45);
+        .cta-primary {
+            background: var(--daisy-mint);
+            color: var(--dark-gray);
+            box-shadow: 0 8px 24px rgba(109, 209, 202, 0.3);
         }
 
-        .btn-secondary {
-            padding: 18px 48px;
+        .cta-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(109, 209, 202, 0.4);
+        }
+
+        .cta-secondary {
             background: transparent;
-            color: var(--pure-white);
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 1.05rem;
-            border: 2px solid var(--pure-white);
-            transition: all 0.3s;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: var(--white);
+            border: 2px solid var(--white);
         }
 
-        .btn-secondary:hover {
-            background: var(--pure-white);
-            color: var(--deep-teal);
-            transform: translateY(-2px);
+        .cta-secondary:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.1);
         }
 
-        /* Footer */
+        .location-languages {
+            background: var(--light-bg);
+            padding: var(--space-2xl) var(--space-xl);
+            text-align: center;
+            border-top: 1px solid var(--border-gray);
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .location-languages p {
+            font-size: 1rem;
+            color: var(--daisy-teal);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+
         footer {
-            background: linear-gradient(180deg, var(--deep-teal-dark) 0%, var(--deep-teal) 100%);
-            color: var(--pure-white);
+            background: var(--dark-gray);
+            color: var(--white);
             padding: var(--space-2xl) var(--space-xl);
             text-align: center;
             font-size: 0.9rem;
-            opacity: 0.9;
         }
 
-        /* Responsive Design */
         @media (max-width: 1024px) {
-            .container {
-                padding: 0 var(--space-lg);
+            .hero h1 {
+                font-size: 2.2rem;
             }
 
-            section h2 {
-                font-size: 2.3rem;
+            .hero-images {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .value-cards {
+                grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 768px) {
             nav {
-                flex-direction: column;
                 padding: var(--space-md) var(--space-lg);
-                gap: var(--space-md);
             }
 
-            nav-links {
-                display: none;
+            .logo-section img {
+                height: 38px;
             }
 
             .hero {
                 padding: var(--space-3xl) var(--space-lg);
                 min-height: auto;
-                gap: var(--space-2xl);
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-                line-height: 1.3;
-            }
-
-            .hero p {
-                font-size: 1.05rem;
-                line-height: 1.7;
-            }
-
-            .hero-cta {
-                padding: 16px 36px;
-                font-size: 1rem;
-            }
-
-            section {
-                padding: var(--space-3xl) 0;
-            }
-
-            section h2 {
-                font-size: 2rem;
-                margin-bottom: var(--space-2xl);
-            }
-
-            .container {
-                padding: 0 var(--space-lg);
-            }
-
-            .trust-grid,
-            .problem-grid,
-            .treatment-grid,
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-2xl);
-            }
-
-            .treatment-header,
-            .treatment-body {
-                padding: var(--space-lg);
-            }
-
-            .treatment-header h3 {
-                font-size: 1.2rem;
-            }
-
-            .faq-container {
-                max-width: 100%;
-            }
-
-            .faq-question {
-                padding: var(--space-lg) var(--space-md);
-                font-size: 1rem;
-            }
-
-            .faq-toggle {
-                margin-left: var(--space-md);
-            }
-
-            .final-cta {
-                padding: var(--space-3xl) var(--space-lg);
-            }
-
-            .final-cta h2 {
-                font-size: 2rem;
-                margin-bottom: var(--space-lg);
-            }
-
-            .final-cta p {
-                font-size: 1.05rem;
-                margin-bottom: var(--space-2xl);
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                gap: var(--space-md);
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                width: 100%;
-                max-width: 100%;
-                padding: 16px var(--space-lg);
-                font-size: 0.95rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            :root {
-                --space-2xl: 32px;
-                --space-3xl: 40px;
-                --space-4xl: 48px;
-            }
-
-            nav {
-                padding: var(--space-sm) var(--space-md);
-            }
-
-            .logo-section img {
-                height: 32px;
             }
 
             .hero h1 {
                 font-size: 1.8rem;
             }
 
-            .hero p {
+            .hero-subheading {
+                font-size: 1rem;
+            }
+
+            .hero-images {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+            }
+
+            .hero-cta {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .value-prop,
+            .results-section,
+            .testimonials-section,
+            .expertise-section,
+            .process-section,
+            .faq-section,
+            .final-cta-section {
+                padding: var(--space-3xl) var(--space-lg);
+            }
+
+            .value-prop h2,
+            .results-section h2,
+            .testimonials-section h2,
+            .expertise-section h2,
+            .process-section h2,
+            .faq-section h2,
+            .final-cta-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+                margin-bottom: var(--space-md);
+            }
+
+            .hero-subheading {
                 font-size: 0.95rem;
+                margin-bottom: var(--space-lg);
             }
 
-            section h2 {
-                font-size: 1.6rem;
-                margin-bottom: var(--space-xl);
+            .value-prop h2,
+            .results-section h2,
+            .testimonials-section h2,
+            .expertise-section h2,
+            .process-section h2,
+            .faq-section h2 {
+                font-size: 1.4rem;
             }
 
-            .trust-card,
-            .problem-card,
-            .treatment-body {
-                padding: var(--space-lg);
-            }
-
-            .treatment-header h3,
-            .trust-card h3,
-            .problem-card h3 {
-                font-size: 1.1rem;
-            }
-
-            .final-cta h2 {
-                font-size: 1.6rem;
-            }
-
-            footer {
-                padding: var(--space-lg);
+            .hero-cta {
+                padding: 16px 32px;
+                font-size: 0.95rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="logo-section">
-            <img src="public/Logo/Daisy Logo Transparent Background.png" alt="DaisyMD Care Logo">
+            <img src="public/images/daisy-logo.png" alt="Daisy MD Care Logo">
         </div>
-        <nav-links>
-            <a href="#treatments">Treatments</a>
-            <a href="#testimonials">Results</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
-        </nav-links>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <h1>Clear Skin Starts Here</h1>
-        <p>Professional acne solutions from clinicians with 40+ years of trusted expertise</p>
-        <a href="#contact" class="hero-cta">Book Free Consultation</a>
+        <h1>Clearer Skin in as Soon as 2 Weeks</h1>
+        <p class="hero-subheading">Acne treatment tailored to your skin, guided by real experts at our Downey, CA clinic. Se habla español.</p>
+
+        <div class="hero-images">
+            <div class="hero-image-card">
+                <img src="public/images/before-01.png" alt="Patient acne treatment before and after - clear skin improvement" loading="lazy">
+            </div>
+            <div class="hero-image-card">
+                <img src="public/images/before-02.png" alt="Professional acne treatment results showing skin transformation" loading="lazy">
+            </div>
+            <div class="hero-image-card">
+                <img src="public/images/before-03.png" alt="Medical-grade acne treatment with visible improvement in skin clarity" loading="lazy">
+            </div>
+        </div>
+
+        <div class="hero-cta-group">
+            <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="hero-cta">Book a Free Consultation</a>
+            <p class="hero-note">Your consultation includes a free post-visit care and skin improvement plan.</p>
+        </div>
     </section>
 
-    <!-- Trust Section -->
-    <section class="container">
-        <h2>Why Patients Choose DaisyMD Care</h2>
-        <div class="trust-grid">
-            <div class="trust-card">
-                <h3>40+ Years of Expertise</h3>
-                <p>Decades of proven clinical experience treating acne, hyperpigmentation, and sensitive skin conditions with consistent results.</p>
+    <section class="value-prop">
+        <h2>Why Choose Daisy MD Care for Acne Treatment</h2>
+        <div class="value-cards">
+            <div class="value-card">
+                <h3>42 Years of Expertise</h3>
+                <p>Since 1979, Daisy MD Care has specialized in problem skin and acne treatment. Our proven track record speaks for itself.</p>
             </div>
-            <div class="trust-card">
-                <h3>Medical-Grade Results</h3>
-                <p>Science-backed treatments formulated with dermatologist-tested ingredients for visible, lasting improvements.</p>
+            <div class="value-card">
+                <h3>Medical-Grade Solutions</h3>
+                <p>Professional, expert-guided skincare backed by dermatological science. Real results, not promises.</p>
             </div>
-            <div class="trust-card">
-                <h3>Free Expert Consultation</h3>
-                <p>No commitment needed. Get personalized guidance from our specialists to find the perfect solution for your skin.</p>
+            <div class="value-card">
+                <h3>Personalized Treatment Plans</h3>
+                <p>Your acne is unique. We create customized treatment strategies targeting root causes, not just symptoms.</p>
             </div>
         </div>
     </section>
 
-    <!-- Problems Section -->
-    <section class="problems-section">
-        <div class="container">
-            <h2>Common Skin Challenges We Solve</h2>
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <span class="label">Challenge</span>
-                    <h3>Persistent Acne</h3>
-                    <p>Breakouts that won't clear? Our medical-grade treatment kits work on active acne at the source, delivering visible results in weeks.</p>
-                </div>
-                <div class="problem-card">
-                    <span class="label">Challenge</span>
-                    <h3>Dark Spots & Hyperpigmentation</h3>
-                    <p>Post-inflammatory marks and melasma fade with our targeted lightening treatments, restoring even skin tone.</p>
-                </div>
-                <div class="problem-card">
-                    <span class="label">Challenge</span>
-                    <h3>Reactive & Sensitive Skin</h3>
-                    <p>Gentle yet effective protocols designed for reactive skin types. Treat acne without irritation or flare-ups.</p>
-                </div>
-                <div class="problem-card">
-                    <span class="label">Challenge</span>
-                    <h3>Rosacea Flare-ups</h3>
-                    <p>Specialized care addressing rosacea triggers with dermatologist-developed formulas that soothe and heal.</p>
-                </div>
+    <section class="results-section">
+        <h2>Verified Results You Can Trust</h2>
+        <div class="results-claim">
+            <h3>Most Patients Begin Seeing Results in as Soon as Two Weeks</h3>
+            <p>Our advanced acne treatment methods combine cutting-edge technology with decades of clinical expertise. This isn't a marketing claim—it's a verified outcome from thousands of satisfied patients in the Downey, CA area and beyond.</p>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <h2>Patient Reviews</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Finally found a treatment that actually works! The team at Daisy MD Care is professional and knowledgeable. My skin has never looked better."</p>
+                <p class="testimonial-author">- Maria G., Downey, CA</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"I've tried everything, but nothing worked until I came to Daisy MD Care. The personalized approach and real expertise made all the difference."</p>
+                <p class="testimonial-author">- James R., Los Angeles, CA</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"They really listen and understand what you're going through. The results are incredible, and the staff is so welcoming."</p>
+                <p class="testimonial-author">- Sofia L., Downey, CA</p>
             </div>
         </div>
     </section>
 
-    <!-- Treatment Section -->
-    <section class="container" id="treatments">
-        <h2>Our Personalized Treatment Plans</h2>
-        <div class="treatment-grid">
-            <div class="treatment-card">
-                <div class="treatment-header">
-                    <h3>Acne Treatment Kit</h3>
-                    <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">For Active Breakouts</p>
-                </div>
-                <div class="treatment-body">
-                    <ul>
-                        <li>Medical-grade acne solution</li>
-                        <li>Level 1 or Sensitive formula</li>
-                        <li>30-day supply included</li>
-                        <li>Clear skin in 4-6 weeks</li>
-                        <li>Expert guidance included</li>
-                    </ul>
-                    <button class="treatment-cta">Start My Plan</button>
-                </div>
+    <section class="expertise-section">
+        <h2>Professional Acne Treatment Approach</h2>
+        <div class="expertise-content">
+            <div class="expertise-item">
+                <h3>Expert Assessment</h3>
+                <p>Our experienced specialists evaluate your skin type, severity, and unique needs to design the right treatment path.</p>
             </div>
-            <div class="treatment-card">
-                <div class="treatment-header">
-                    <h3>Skin Lightening System</h3>
-                    <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">For Dark Spots & Melasma</p>
-                </div>
-                <div class="treatment-body">
-                    <ul>
-                        <li>Targeted hyperpigmentation treatment</li>
-                        <li>Clinically proven formula</li>
-                        <li>Progressive lightening protocol</li>
-                        <li>Results visible in 6-8 weeks</li>
-                        <li>Maintenance support included</li>
-                    </ul>
-                    <button class="treatment-cta">Start My Plan</button>
-                </div>
+            <div class="expertise-item">
+                <h3>Advanced Therapies</h3>
+                <p>We use state-of-the-art, medical-grade treatments proven to deliver clear skin faster and more effectively.</p>
             </div>
-            <div class="treatment-card">
-                <div class="treatment-header">
-                    <h3>Sensitive Skin Protocol</h3>
-                    <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">For Reactive Skin Types</p>
-                </div>
-                <div class="treatment-body">
-                    <ul>
-                        <li>Gentle, dermatologist-tested formula</li>
-                        <li>Zero irritation approach</li>
-                        <li>Soothing botanical ingredients</li>
-                        <li>Visible improvement in 3-4 weeks</li>
-                        <li>Weekly check-ins with specialist</li>
-                    </ul>
-                    <button class="treatment-cta">Start My Plan</button>
-                </div>
+            <div class="expertise-item">
+                <h3>Ongoing Support</h3>
+                <p>Your journey doesn't end with treatment. We provide continuous guidance and skin maintenance plans for lasting results.</p>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-section" id="testimonials">
-        <div class="container">
-            <h2>See the Transformation</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"My skin has never looked better. Clear in 4 weeks! DaisyMD Care is amazing."</p>
-                    <div class="author">Sarah M.</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Finally found something that works for my sensitive skin. No irritation, just results."</p>
-                    <div class="author">Jennifer L.</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"My dark spots faded in 6 weeks. The consultation was free and incredibly helpful."</p>
-                    <div class="author">Maria R.</div>
-                </div>
+    <section class="process-section">
+        <h2>Your Clear Skin Journey</h2>
+        <div class="process-timeline">
+            <div class="process-step">
+                <h4>Step 1: Consultation</h4>
+                <p>Book a free consultation. We'll assess your skin, discuss your concerns, and develop a personalized plan.</p>
+            </div>
+            <div class="process-step">
+                <h4>Step 2: Treatment</h4>
+                <p>Begin your customized acne treatment with our expert guidance using medical-grade products and therapies.</p>
+            </div>
+            <div class="process-step">
+                <h4>Step 3: Results</h4>
+                <p>See visible improvement in as soon as 2 weeks. Most patients achieve significant skin clarity within 4-6 weeks.</p>
+            </div>
+            <div class="process-step">
+                <h4>Step 4: Maintenance</h4>
+                <p>We provide a personalized post-visit care plan to maintain your clear skin and prevent future breakouts.</p>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section" id="faq">
-        <div class="container">
-            <h2>Questions About Our Treatments?</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How long until I see results?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Most patients see visible improvement within 3-6 weeks depending on the treatment. Our acne kits typically show results in 4-6 weeks, while skin lightening systems take 6-8 weeks. We provide a comprehensive timeline during your free consultation.</p>
-                    </div>
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How quickly will I see results? <span>+</span>
                 </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Is this suitable for sensitive skin?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutely! We specifically formulate products for sensitive skin types. Our Sensitive Skin Protocol is designed with zero irritation in mind, using gentle, dermatologist-tested ingredients perfect for reactive skin.</p>
-                    </div>
+                <div class="faq-answer">
+                    <p>Most of our patients begin seeing visible improvement in as soon as two weeks. Significant skin clarity typically occurs within 4-6 weeks, depending on your skin type and acne severity.</p>
                 </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Do I need a dermatologist referral?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>No referral needed! You can schedule your free consultation directly with us. Our specialists will assess your skin and recommend the best treatment plan for your specific concerns.</p>
-                    </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Is the treatment safe for all skin types? <span>+</span>
                 </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What's included in the free consultation?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Your free consultation includes a comprehensive skin assessment, personalized treatment recommendations, pricing information, and a detailed timeline of expected results. No cost, no obligation to purchase.</p>
-                    </div>
+                <div class="faq-answer">
+                    <p>Yes. Our medical-grade treatments are customized for your specific skin type and concerns. During your consultation, we'll assess your skin and ensure the treatment is perfectly tailored to you.</p>
                 </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Can I use these products with other skincare?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>During your consultation, we'll review your current skincare routine and make recommendations to ensure compatibility and maximize results. We want your entire routine working together effectively.</p>
-                    </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Do you offer bilingual services? <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, se habla español. Our team is fluent in both English and Spanish to ensure clear communication and comfort for all our patients.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    What makes Daisy MD Care different? <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>With 42 years of specialized experience in acne and problem skin, we combine expert knowledge with cutting-edge medical-grade treatments. We focus on personalized solutions that target root causes, not just symptoms.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    What happens after my treatment? <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Your consultation includes a free post-visit care and skin improvement plan. We provide ongoing guidance to help you maintain your clear skin and prevent future breakouts.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Are you located in Downey? <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, Daisy MD Care is conveniently located in Downey, California, serving the Downey area and surrounding communities in Los Angeles County.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA Section -->
-    <section class="final-cta" id="contact">
-        <h2>Your Clear Skin Journey Starts Today</h2>
-        <p>Schedule your free consultation with a skin specialist. No commitment, no hidden fees—just personalized guidance toward clearer, healthier skin.</p>
+    <section class="location-languages">
+        <p>Located in Downey, California | Se habla español</p>
+    </section>
+
+    <section class="final-cta-section" id="contact">
+        <h2>Ready for Clear, Healthy Skin?</h2>
+        <p>Book your free consultation today. Our experts will create a personalized acne treatment plan just for you. Includes free post-visit care plan.</p>
         <div class="cta-buttons">
-            <a href="#" class="btn-primary">Book Your Free Consultation</a>
-            <a href="#treatments" class="btn-secondary">View Treatment Plans</a>
+            <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="cta-button cta-primary">Book Consultation</a>
+            <a href="tel:+1-562-CONTACT" class="cta-button cta-secondary">Call Us</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 DaisyMD Care. Professional Acne Treatment Solutions. | <a href="#" style="color: var(--mint-green); text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: var(--mint-green); text-decoration: none;">Contact Us</a></p>
+        <p>&copy; 2025 Daisy MD Care. Medical-Grade Acne Treatment in Downey, California. All rights reserved.</p>
     </footer>
 
     <script>
-        // FAQ Accordion Functionality
-        const faqItems = document.querySelectorAll('.faq-item');
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const isActive = answer.classList.contains('active');
 
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-
-            question.addEventListener('click', () => {
-                // Close other items
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                    }
-                });
-
-                // Toggle current item
-                item.classList.toggle('active');
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                item.classList.remove('active');
+                item.previousElementSibling.querySelector('span').textContent = '+';
             });
-        });
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && document.querySelector(href)) {
-                    e.preventDefault();
-                    document.querySelector(href).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+            if (!isActive) {
+                answer.classList.add('active');
+                element.querySelector('span').textContent = '−';
+            }
+        }
     </script>
 </body>
 </html>
