@@ -78,7 +78,12 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, var(--daisy-teal-dark) 0%, var(--daisy-teal) 50%, rgba(14, 58, 71, 0.9) 100%);
+            background-image:
+                linear-gradient(135deg, rgba(5, 31, 42, 0.75) 0%, rgba(14, 58, 71, 0.7) 50%, rgba(14, 58, 71, 0.8) 100%),
+                url('public/images/hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: var(--white);
             padding: var(--space-4xl) var(--space-xl);
             text-align: center;
@@ -99,8 +104,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(109, 209, 202, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(71, 163, 194, 0.08) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 50%, rgba(109, 209, 202, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(71, 163, 194, 0.12) 0%, transparent 50%);
             pointer-events: none;
         }
 
